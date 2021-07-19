@@ -2,12 +2,16 @@ html {
     height: 100%;
 }
 
+nav{
+height: 150
+}
+
 body {
-	background: url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
-	background-size: cover;
+    background: url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
+    background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
-    font-family: "Lato";
+    font-family: 'Lato';
 }
 
 /* from Bulma */
@@ -22,8 +26,6 @@ body {
 .logo-font {
     text-transform: uppercase;
 }
-
-
 
 .main-logo-link {
     width: fit-content;
@@ -68,10 +70,11 @@ body {
 	top: 0;
 	left: 0;
 	position: fixed;
-    background-color: white;
+	background: white;
 	z-index: -1;
 }
-/* --------------------------------- Media queries */
+
+/* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
@@ -91,11 +94,27 @@ body {
     }
 
     .header-container {
-        padding-top: 200px;
+        padding-top: 164px;
     }
 }
 
-@media (max-width: 800px) {
-    .product-heading{
-        padding-top: 200px;
-        } }
+/* pad the top a bit when navbar is collapsed on mobile */
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 116px;
+    }
+
+    body {
+        height: calc(100vh - 116px);
+    }
+
+    .products-heading-container{
+    padding-top: 70px;
+    }
+}
+
+@media (max-width: 415px){
+    .products-heading-container{
+        padding-top: 150px;
+        }
+}
