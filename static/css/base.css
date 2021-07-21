@@ -2,10 +2,6 @@ html {
     height: 100%;
 }
 
-nav{
-height: 150
-}
-
 body {
     background: url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
     background-size: cover;
@@ -74,6 +70,11 @@ body {
 	z-index: -1;
 }
 
+a.category-badge > span.badge:hover {
+    background: #212529 !important;
+    color: #fff !important;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -107,14 +108,4 @@ body {
     body {
         height: calc(100vh - 116px);
     }
-
-    .products-heading-container{
-    padding-top: 70px;
-    }
-}
-
-@media (max-width: 415px){
-    .products-heading-container{
-        padding-top: 150px;
-        }
 }
